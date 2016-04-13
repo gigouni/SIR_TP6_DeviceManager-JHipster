@@ -1,0 +1,28 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "house",
+            "otherEntityName": "house",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "place",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "conso",
+            "fieldType": "Float"
+        }
+    ],
+    "changelogDate": "20160413203102",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "heater",
+    "pagination": "no"
+}

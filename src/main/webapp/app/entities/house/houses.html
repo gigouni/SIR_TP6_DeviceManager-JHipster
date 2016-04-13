@@ -1,0 +1,64 @@
+<div>
+    <h2>Houses</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="house.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new House
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Size (m²)</span></th>
+                    <th><span>Number of rooms</span></th>
+                    <th><span>Address</span></th>
+                    <th><span>Owner</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="house in vm.houses track by house.id">
+                    <td><a ui-sref="house-detail({id:house.id})">{{house.id}}</a></td>
+                    <td>{{house.size}}</td>
+                    <td>{{house.nbRooms}}</td>
+                    <td>{{house.address}}</td>
+                    <td>
+                        <a ui-sref="person-detail({id:house.owner.id})">{{house.owner.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="house-detail({id:house.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="house.edit({id:house.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="house.delete({id:house.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

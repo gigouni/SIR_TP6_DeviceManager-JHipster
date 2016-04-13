@@ -1,0 +1,15 @@
+version: '2'
+services:
+    sir_tp6-app:
+        image: sir_tp6
+        external_links:
+            - sir_tp6-mysql:mysql
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod
+            - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/sir_tp6?useUnicode=true&characterEncoding=utf8&useSSL=false
+        ports:
+            - 8080:8080
+    sir_tp6-mysql:
+        extends:
+            file: mysql.yml
+            service: sir_tp6-mysql

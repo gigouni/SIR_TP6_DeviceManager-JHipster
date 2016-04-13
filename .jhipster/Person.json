@@ -1,0 +1,25 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "house",
+            "otherEntityName": "house",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "owner"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "surname",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160413201520",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "person",
+    "pagination": "no"
+}

@@ -1,0 +1,41 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "owner",
+            "otherEntityName": "person",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "electronicDevice",
+            "otherEntityName": "electronicDevice",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "house"
+        },
+        {
+            "relationshipName": "heater",
+            "otherEntityName": "heater",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "house"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "size",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "nbRooms",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160413201718",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "house",
+    "pagination": "no"
+}

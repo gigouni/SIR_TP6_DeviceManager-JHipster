@@ -1,0 +1,28 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "house",
+            "otherEntityName": "house",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "conso",
+            "fieldType": "Float"
+        }
+    ],
+    "changelogDate": "20160413203301",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "electronic_device",
+    "pagination": "no"
+}
